@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bussiness College</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" sizes="64x64">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../stylesheets/signup.css">
+</head>
+<body>
+
+  
+     <form action="/signup" method="post" class="signup" autocomplete="off">
+      
+  <% if (locals.existMessage) { %>
+    <p class="showExis">
+      <%= locals.existMessage.error[0] %>
+    </p>
+  <% } %>
+
+  <h1>Create account</h1>
+  <h2>Already have an account? <a href="/login">Sign in</a></h2>
+
+  <div class="signup__field">
+    <input class="signup__input" type="text" name="firstname" id="Firstname" required />
+    <label class="signup__label" for="Firstname">Firstname</label>
+  </div>
+
+  <div class="signup__field">
+    <input class="signup__input" type="text" name="lastname" id="Lastname" required />
+    <label class="signup__label" for="Lastname">Lastname</label>
+  </div>
+
+<% if (locals.messages) { %>
+      <p class="error"><%= locals.messages.error[0] %></p>
+  <% } %>
+  <div class="signup__field">
+    <input class="signup__input" type="text" name="email" id="email" required />
+    <label class="signup__label" for="email">Email</label>
+  </div> 
+
+  <div class="signup__field">
+    <input class="signup__input" type="password" name="password" id="password" required />
+    <label class="signup__label" for="password">Password</label>
+  </div>
+
+  <button type="submit">Sign up</button>
+</form>
+
+</body>
+</html>
+</body>
+</html>
